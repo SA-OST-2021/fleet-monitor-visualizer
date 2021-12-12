@@ -273,3 +273,4 @@ fig.update_layout(width=2000, height=1100, template="plotly_white")#, title_text
 fig.show()
 fig.write_html("plot.html")
 fig.write_image("plot.svg")
+fig.write_image("plot.pdf")
