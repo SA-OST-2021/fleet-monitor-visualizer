@@ -59,7 +59,7 @@ app.layout = html.Div([
 def update_graph_scatter(n):
     global df, systemStartTime, maxDisplayTime
     
-    files = os.listdir(importPath / "data")
+    files = sorted(os.listdir(importPath / "data"))
     valid = (update_graph_scatter.fileIndex + 1) in range(len(files))
     if((time.time() - update_graph_scatter.time > 2.5) and valid):
         update_graph_scatter.time = time.time()

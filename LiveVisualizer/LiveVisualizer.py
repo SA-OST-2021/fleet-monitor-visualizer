@@ -82,9 +82,9 @@ app.layout = html.Div([
 def update_graph_scatter(input_data):
     global df, systemStartTime, maxDisplayTime
 
-    files = os.listdir(importPath / "data")
+    files = sorted(os.listdir(importPath / "data"))
     try:
-        index = sorted([int(i.split('.')[0]) for i in files])[-1]
+        index = [int(i.split('.')[0]) for i in files][-1]
     except:
         index = -1
     if(index != update_graph_scatter.fileIndex):
