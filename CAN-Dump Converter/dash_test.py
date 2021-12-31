@@ -78,7 +78,7 @@ def update_graph_scatter(input_data):
 
 
 if __name__ == '__main__':
-    port = 8080
+    port = 40000
     threading.Timer(1, webbrowser.open_new("http://localhost:{}".format(port))).start();
     #app.run_server(port=port, threaded=True, processes=1)
     app.run_server(port=port)
